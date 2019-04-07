@@ -1,3 +1,3 @@
-import ItsWorking from './components/ItsWorking'
+import * as Colors from './components/ColorsPallete'
 
-export {ItsWorking}
+export default Colors
