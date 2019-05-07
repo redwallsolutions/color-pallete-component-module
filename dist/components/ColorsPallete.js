@@ -1,9 +1,9 @@
 export var primary = '#E20613';
 export var secondary = '#f8694f';
-export var _default = '#292929';
+export var _default = '#1b1b1b';
 export var primaryContrast = '#f9f9f9';
-export var secondaryContrast = '#fff';
-export var defaultContrast = '#b9b9b9';
+export var secondaryContrast = primaryContrast;
+export var defaultContrast = primaryContrast;
 export var primaryDark = '#7c0b04';
 export var secondaryDark = '#883a2c';
 export var defaultDark = defaultContrast;

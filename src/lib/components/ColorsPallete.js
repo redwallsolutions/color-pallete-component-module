@@ -1,9 +1,9 @@
 export const primary = '#E20613'
 export const secondary = '#f8694f'
-export const _default = '#292929'
+export const _default = '#1b1b1b'
 export const primaryContrast = '#f9f9f9'
-export const secondaryContrast = '#fff'
-export const defaultContrast = '#b9b9b9'
+export const secondaryContrast = primaryContrast
+export const defaultContrast = primaryContrast
 export const primaryDark = '#7c0b04'
 export const secondaryDark = '#883a2c'
 export const defaultDark = defaultContrast
