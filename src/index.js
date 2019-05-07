@@ -22,18 +22,19 @@ const ResetCSS = createGlobalStyle `
   }
 
 `
-const inputs = ['primary',
+const inputs = [
+  'primary',
   'secondary',
+  '_default',
   'primaryDark',
   'secondaryDark',
+  'defaultDark',
   'primaryContrast',
   'secondaryContrast',
-  'neutral',
-  'neutralDark',
-  'neutralContrast',
-  'primaryDarkContrast',
-  'secondaryDarkContrast',
-  'neutralDarkContrast'
+  'defaultContrast',
+  'primaryContrastDark',
+  'secondaryContrastDark',
+  'defaultContrastDark'
 ]
 
 class App extends Component {
@@ -49,11 +50,12 @@ class App extends Component {
   }
 
   renderInputGroups = (inputs) => {
+    console.log(this.state.backgroundColor);
     return (
       inputs.map((input, index) => {
         return (
           <div className='input-group' key={index} style={{marginBottom: '1em'}}>
-            <div><label for={input} style={{color: Color(this.state.backgroundColor).negate().string()}}>{input.toUpperCase()}</label></div>
+            <div><label htmlFor={input} style={{color: Color(this.state.backgroundColor).negate().string()}}>{input.toUpperCase()}</label></div>
             <div>
               <input name='color' id={input} type='radio' onChange={this.changeColor}/>
             </div>
