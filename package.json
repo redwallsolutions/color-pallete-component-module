@@ -6,6 +6,7 @@
   "files": [
     "dist"
   ],
+  "repository": "https://github.com/redwallsolutions/color-pallete-component-module.git",
   "scripts": {
     "start": "react-scripts start",
     "build-examples": "react-scripts build",
