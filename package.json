@@ -1,12 +1,12 @@
 {
-  "name": "color-pallete-component-module",
+  "name": "@redwallsolutions/color-pallete-component-module",
   "version": "1.2.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/redwallsolutions/color-pallete-component-module.git",
+  "repository": "https://github.com/redwallsolutions/color-pallete-component-module",
   "scripts": {
     "start": "react-scripts start",
     "build-examples": "react-scripts build",
