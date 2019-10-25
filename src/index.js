@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from "react-dom";
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 import Colors from './lib'
 import Color from 'color';

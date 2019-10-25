@@ -1,6 +1,6 @@
 {
   "name": "@redwallsolutions/color-pallete-component-module",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -22,7 +22,12 @@
     "react-dom": "^16.10.2",
     "react-scripts": "^3.2.0",
     "rimraf": "^2.6.3",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "@types/jest": "24.0.19",
+    "@types/node": "12.11.5",
+    "@types/react": "16.9.9",
+    "@types/react-dom": "16.9.2",
+    "typescript": "3.6.4"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
