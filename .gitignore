@@ -1,8 +1,8 @@
-/demo/output
-/node_modules
-/.cache
-/build
-/dist
+demo/output
+node_modules
+.cache
+build
+dist
 .env.local
 .env.development.local
 .env.test.local
