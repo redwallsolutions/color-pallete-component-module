@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { render } from "react-dom";
-import { createGlobalStyle } from 'styled-components';
+import React, { useState } from 'react'
+import { render } from 'react-dom'
+import { createGlobalStyle } from 'styled-components'
 
 import Colors from './lib'
-import Color from 'color';
+import Color from 'color'
 
-const ResetCSS = createGlobalStyle `
+const ResetCSS = createGlobalStyle`
   * {
     padding:0;
     margin:0;
@@ -23,62 +23,76 @@ const ResetCSS = createGlobalStyle `
 
 `
 const inputs = [
-  'primary',
-  'secondary',
-  '_default',
-  'primaryDark',
-  'secondaryDark',
-  'defaultDark',
-  'primaryContrast',
-  'secondaryContrast',
-  'defaultContrast',
-  'primaryContrastDark',
-  'secondaryContrastDark',
-  'defaultContrastDark'
+	'primary',
+	'secondary',
+	'_default',
+	'primaryDark',
+	'secondaryDark',
+	'defaultDark',
+	'primaryContrast',
+	'secondaryContrast',
+	'defaultContrast',
+	'primaryContrastDark',
+	'secondaryContrastDark',
+	'defaultContrastDark'
 ]
 
-class App extends Component {
+function App() {
+	const [backgroundColor, setBackgroundColor] = useState('rgb(250,250,250)')
 
-  state = {
-    backgroundColor: 'rgb(250,250,250)'
-  }
+	function changeColor(input) {
+		setBackgroundColor(Colors[input.target.id])
+	}
 
-  changeColor = (input) => {
-    this.setState({
-      backgroundColor: Colors[input.target.id]
-    });
-  }
+	function renderInputGroups(inputs) {
+		return inputs.map((input, index) => {
+			return (
+				<div
+					className="input-group"
+					key={index}
+					style={{ marginBottom: '1em' }}
+				>
+					<div>
+						<label
+							htmlFor={input}
+							style={{
+								color: Color(backgroundColor)
+									.negate()
+									.string()
+							}}
+						>
+							{input.toUpperCase()}
+						</label>
+					</div>
+					<div>
+						<input
+							name="color"
+							id={input}
+							type="radio"
+							onChange={changeColor}
+						/>
+					</div>
+				</div>
+			)
+		})
+	}
 
-  renderInputGroups = (inputs) => {
-    console.log(this.state.backgroundColor);
-    return (
-      inputs.map((input, index) => {
-        return (
-          <div className='input-group' key={index} style={{marginBottom: '1em'}}>
-            <div><label htmlFor={input} style={{color: Color(this.state.backgroundColor).negate().string()}}>{input.toUpperCase()}</label></div>
-            <div>
-              <input name='color' id={input} type='radio' onChange={this.changeColor}/>
-            </div>
-          </div>
-        )
-      })
-    )
-  }
-
-  render() {
-    const { backgroundColor } = this.state;
-    return (
-      <div className='container' style={{width: '100%', height: 'auto', transition: 'all .3s ease-in-out', backgroundColor}}>
-        <ResetCSS/>
-        <div style={{display: 'flex', flexWrap: 'wrap'}}>
-          {
-            this.renderInputGroups(inputs)
-          }
-        </div>
-      </div>
-    );
-  }
-
+	return (
+		<div
+			className="container"
+			style={{
+				width: '100%',
+				height: 'auto',
+				transition: 'all .3s ease-in-out',
+				backgroundColor
+			}}
+		>
+			<ResetCSS />
+			<div style={{ display: 'flex', flexWrap: 'wrap' }}>
+				{renderInputGroups(inputs)}
+			</div>
+		</div>
+	)
 }
 
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById('root'))
