@@ -1,6 +1,6 @@
 {
   "name": "@redwallsolutions/color-pallete-component-module",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,10 +19,9 @@
     "@babel/preset-react": "^7.6.3",
     "babel-preset-react-app": "^9.0.2",
     "parcel-bundler": "^1.12.4",
-    "react": ">= 16.3.0",
-    "react-dom": ">= 16.3.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "rimraf": "^2.6.3",
-    "styled-components": "^4.4.0",
     "typescript": "3.6.4"
   },
   "publishConfig": {
