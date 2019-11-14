@@ -1,5 +1,14 @@
 {
   "name": "@redwallsolutions/color-pallete-component-module",
+  "author": "Andrew Ribeiro",
+  "description": "Color Pallete is a set of color based on Redwall Solutions brand",
+  "license": "MIT",
+  "keywords": [
+    "colors",
+    "redwall",
+    "pallete",
+    "red"
+  ],
   "version": "2.0.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -11,13 +20,14 @@
   "scripts": {
     "start": "rimraf demo/output && parcel demo/index.html -d demo/output --open",
     "build": "rimraf dist && tsc",
-    "release": "yarn build && npm publish"
+    "release": "yarn build && np"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/preset-react": "^7.6.3",
     "babel-preset-react-app": "^9.0.2",
+    "np": "^5.1.3",
     "parcel-bundler": "^1.12.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -25,12 +35,6 @@
     "typescript": "3.6.4"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "access": "public"
+  }
 }
