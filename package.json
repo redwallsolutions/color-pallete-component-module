@@ -9,7 +9,7 @@
 		"pallete",
 		"red"
 	],
-	"version": "2.0.5",
+	"version": "2.0.6",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
