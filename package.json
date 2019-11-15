@@ -20,12 +20,14 @@
   "scripts": {
     "start": "rimraf demo/output && parcel demo/index.html -d demo/output --open",
     "build": "rimraf dist && tsc",
+    "test": "jest",
     "release": "yarn build && np"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/preset-react": "^7.6.3",
+    "@types/jest": "^24.0.23",
     "babel-preset-react-app": "^9.0.2",
     "parcel-bundler": "^1.12.4",
     "react": "^16.11.0",
@@ -35,5 +37,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0"
   }
 }
